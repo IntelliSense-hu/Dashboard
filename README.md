@@ -68,3 +68,80 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+## 📁 Project Structure
+
+```
+Dashboard/
+├── public/                      # Static files
+│   ├── index.html               # HTML root
+│   └── img/                     # Web assets (e.g., .webp image)
+│
+├── src/                         # React app source
+│   ├── components/              # Custom components
+│   │   ├── MovementChart.js     # Plots movement trends
+│   │   ├── MovementValue.js     # Displays numeric movement data
+│   │   └── RoomStatus.js        # Shows current room occupancy status
+│   ├── App.js                   # Main component layout
+│   ├── index.js                 # Entry point
+│   ├── App.css / index.css      # Stylesheets
+│   └── ...                      # Misc: logo, setupTests, metrics
+│
+├── package.json                 # Project dependencies and scripts
+└── README.md                    # Project documentation
+```
+
+---
+
+## 🎯 Component Overview
+
+- **MovementChart**: Plots historical CSI-derived motion intensity using a charting library.
+- **MovementValue**: Displays real-time movement values numerically.
+- **RoomStatus**: Indicates occupancy based on threshold logic or ML classification.
+
+---
+
+## 🌐 Running the Dashboard
+
+To start the development server:
+
+```bash
+npm install
+npm start
+```
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## ⚙️ Build for Production
+
+To generate a production-optimized static build:
+
+```bash
+npm run build
+```
+
+Deploy the contents of the `build/` folder to a static host like Vercel or Netlify.
+
+---
+
+## 🧠 Developer Notes
+
+- Extend `RoomStatus.js` logic for dynamic ML-based predictions.
+- Use WebSockets or REST polling for live CSI data feeds.
+- Consider CSS modules or Tailwind for scalable styling.
+
+---
+
+## 📦 Key Dependencies
+
+Check `package.json` for full list. Highlights include:
+
+- `react`
+- `charting library` (e.g., Chart.js or Recharts)
+- `react-scripts`
+
+---
